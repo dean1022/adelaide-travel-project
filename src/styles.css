@@ -20,12 +20,14 @@ header {
 
 .grid {
   display: grid;
-  padding: 20px;
   grid-gap: 10px;
-  align-items: center;
 }
 
 .grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-3-columns-with-first-half {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
@@ -33,8 +35,38 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+.card {
+  background-color: white;
+  margin: 30px 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
 .image-responsive {
   max-width: 100%;
+  display: block;
+}
+
+.card-images {
+  width: 1fr;
+  height: 1fr;
+}
+
+.btn {
+  display: block;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  font-weight: 400px;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  padding: 5px;
 }
 
 header h1 {
@@ -75,9 +107,17 @@ header a {
 }
 
 section {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 100px auto;
+  padding: 50px;
+}
+
+section.secondary {
+  background-color: rgb(227, 227, 227);
+}
+
+.text-center {
+  text-align: center;
 }
 
 main {
@@ -169,5 +209,9 @@ footer a {
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 20px;
   }
 }
