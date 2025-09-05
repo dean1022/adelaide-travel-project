@@ -1,6 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(197, 194, 194);
+  background-color: rgb(227, 227, 227);
 }
 
 header {
@@ -14,17 +14,27 @@ header {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .grid {
   display: grid;
+  padding: 20px;
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.grid-3-columns {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
-.grid div {
-  padding-right: 15px;
+.grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+}
+
+.image-responsive {
+  max-width: 100%;
 }
 
 header h1 {
@@ -62,6 +72,43 @@ header a {
   text-decoration: none;
   background: white;
   padding: 6px 12px;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px auto;
+}
+
+main {
+  background-color: white;
+  display: inline-block;
+  align-items: center;
+}
+
+main h2 {
+  font-weight: 500px;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 5px;
+  color: rgb(101, 97, 97);
+  opacity: 0.3;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+main h3 {
+  font-weight: 500px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+main p {
+  font-weight: 300px;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
 }
 
 footer {
@@ -103,7 +150,7 @@ footer a {
   font-size: 13px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 576px) {
   header {
     padding: 60px 0;
   }
@@ -118,5 +165,9 @@ footer a {
 
   header h3 {
     font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
